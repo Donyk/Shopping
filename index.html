@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Shopping List</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <style>
+      body {
+          background-color: lightblue;
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+      }
+
+      .container {
+          width: 90%;
+          max-width: 800px; /* Maximum width of the content */
+          margin: auto; /* Center align the content */
+          padding: 10px;
+      }
+
+      /* Responsive design for smaller screens */
+      @media screen and (max-width: 600px) {
+          .container {
+              width: 100%; /* Full width on small screens */
+              padding: 5px;
+          }
+
+          /* Additional styles for smaller screens */
+      }
+
+      .crossed-out {
+          text-decoration: line-through;
+      }
+    
+      .cross-out-btn {
+          margin-left: 10px;
+      }
+  
+  </style>
+  <body>
+      <div class="container">
+          <h1>My Shopping List</h1>
+
+          <h2>Dairy Products</h2>
+          <ul id="dairy-products">
+          </ul>
+          <input type="text" id="new-dairy-item" placeholder="Add new dairy item">
+          <button onclick="addItem('dairy-products', 'new-dairy-item')">Add</button>
+  
+          <h2>Bakery & Grains</h2>
+          <ul id="bakery-grains">
+          </ul>
+          <input type="text" id="new-bakery-item" placeholder="Add new bakery item">
+          <button onclick="addItem('bakery-grains', 'new-bakery-item')">Add</button>
+  
+          <h2>Pantry Staples</h2>
+          <ul id="pantry-staples">
+          </ul>
+          <input type="text" id="new-pantry-item" placeholder="Add new pantry item">
+          <button onclick="addItem('pantry-staples', 'new-pantry-item')">Add</button>
+  
+          <h2>Breakfast</h2>
+          <ul id="breakfast">
+          </ul>
+          <input type="text" id="Breakfast" placeholder="Breakfast">
+          <button onclick="addItem('Breakfast', 'Breakfast-item')">Add</button>
+  
+          <h2>Personal Care</h2>
+          <ul id="personal-care">
+          </ul>
+          <input type="text" id="new-personal-care-item" placeholder="Add new personal care item">
+          <button onclick="addItem('personal-care', 'new-personal-care-item')">Add</button>
+    
+          <h2>Cleaning Supplies</h2>
+          <ul id="cleaning-supplies">
+          </ul>
+          <input type="text" id="cleaning-item" placeholder="Add new Cleaning item">
+          <button onclick="addItem('Cleaning', 'Cleaning-item')">Add</button>
+  
+          <h2>Household Items</h2>
+          <ul id="household-items">
+          </ul>
+          <input type="text" id="household-item" placeholder="Add new Household item">
+          <button onclick="addItem('Household', 'Household-item')">Add</button>
+  
+          <h2>Snacks</h2>
+          <ul id="snacks">
+          </ul>
+          <input type="text" id="Snacks-item" placeholder="Add new Snacks item">
+          <button onclick="addItem('Snacks', 'Snacks-item')">Add</button>
+  
+          <h2>Fruits & Vegetables</h2>
+          <ul id="fruits-vegetables">
+          </ul>
+          <input type="text" id="Fruits-Vegetables-item" placeholder="Add new Fruits item">
+          <button onclick="addItem('Fruits-Vegetables', 'Fruits-Vegetables-item')">Add</button>
+  
+          <h2>Others</h2>
+          <ul id="others">
+          </ul>
+          <input type="text" id="Others-item" placeholder="Add new Others item">
+          <button onclick="addItem('Others-Vegetables', 'Others-Vegetables-item')">Add</button>
+        </div>
+
+      <script src="script.js"></script>
+  </body>
+</html>

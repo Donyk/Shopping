@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue; /* This is just for testing */
+}
+
+.crossed-out {
+    text-decoration: line-through;
+}
+
+.cross-out-btn {
+    margin-left: 50px;
+}
