@@ -1,11 +1,124 @@
 body {
-    background-color: lightblue; /* This is just for testing */
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.crossed-out {
-    text-decoration: line-through;
+.container {
+  width: 92%;
+  max-width: 850px;
+  margin: auto;
+  padding: 12px 10px 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.danger {
+  background: #b00020;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.header-actions button:not(.danger) {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.6);
+}
+
+.category {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 14px;
+  padding: 10px 10px 12px;
+  margin: 12px 0;
+}
+
+.category h2 {
+  margin: 6px 0 8px;
+}
+
+ul {
+  padding-left: 18px;
+  margin: 0 0 8px 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.item-text {
+  flex: 1;
+  user-select: none;
+}
+
+.item-text.crossed-out {
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 
 .cross-out-btn {
-    margin-left: 50px;
+  margin-left: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.75);
+}
+
+.delete-btn {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.75);
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-row input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.add-row button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.75);
+}
+
+.footer {
+  margin-top: 14px;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px 8px 18px;
+  }
 }
