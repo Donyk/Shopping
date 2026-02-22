@@ -6,17 +6,24 @@ body {
 }
 
 .container {
-  width: 92%;
+  width: 95%;
   max-width: 850px;
   margin: auto;
-  padding: 12px 10px 24px;
+  padding: 10px 8px 18px;
 }
+
+/* HEADER */
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 4px 0 2px;
+  font-size: 1.6rem;
 }
 
 .header-actions {
@@ -27,112 +34,122 @@ body {
 
 button {
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 button.danger {
   background: #b00020;
   color: white;
   border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
 .header-actions button:not(.danger) {
   border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
   background: rgba(255,255,255,0.6);
 }
 
+/* CATEGORY CARD */
+
 .category {
   background: rgba(255, 255, 255, 0.55);
-  border-radius: 14px;
-  padding: 10px 10px 12px;
-  margin: 12px 0;
+  border-radius: 12px;
+  padding: 8px 10px 10px;
+  margin: 10px 0;
 }
 
 .category h2 {
-  margin: 6px 0 8px;
+  margin: 4px 0 6px;
+  font-size: 1.2rem;
 }
 
+/* LIST */
+
 ul {
-  padding-left: 18px;
-  margin: 0 0 8px 0;
+  padding-left: 14px;
+  margin: 0 0 6px 0;
 }
 
 li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 0;
+  gap: 8px;
+  padding: 4px 0;
 }
 
 .item-text {
   flex: 1;
   user-select: none;
+  font-size: 0.95rem;
 }
 
 .item-text.crossed-out {
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
-.cross-out-btn {
-  margin-left: 14px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: none;
-  background: rgba(255,255,255,0.75);
-}
+/* ACTION BUTTONS INSIDE LIST */
 
+.cross-out-btn,
 .delete-btn {
-  padding: 6px 10px;
-  border-radius: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
   border: none;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.8);
+  font-size: 0.8rem;
 }
 
 /* ADD ROW */
+
 .add-row {
   display: flex;
-  gap: 8px;
-}
-
-/* Prevent buttons from breaking text into multiple lines */
-.add-row button {
-  border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.75);
-  white-space: nowrap;
+  gap: 6px;
+  margin-top: 6px;
 }
 
 .add-row input {
   flex: 1;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.2);
+  font-size: 0.9rem;
 }
 
-.footer {
-  margin-top: 14px;
-  opacity: 0.75;
+.add-row button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
-/* MOBILE IMPROVEMENTS */
+/* MOBILE IMPROVEMENT */
+
 @media screen and (max-width: 600px) {
-  .container {
-    width: 95%;
-    padding: 10px 8px 18px;
-  }
 
-  /* Allow add-row to wrap on small screens */
   .add-row {
     flex-wrap: wrap;
   }
 
-  /* Make buttons stretch evenly on small screens */
   .add-row button {
     flex: 1;
   }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .category h2 {
+    font-size: 1.1rem;
+  }
+}
+
+.footer {
+  margin-top: 12px;
+  opacity: 0.7;
+  font-size: 0.8rem;
 }
