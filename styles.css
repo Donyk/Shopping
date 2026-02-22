@@ -92,9 +92,19 @@ li {
   background: rgba(255,255,255,0.75);
 }
 
+/* ADD ROW */
 .add-row {
   display: flex;
   gap: 8px;
+}
+
+/* Prevent buttons from breaking text into multiple lines */
+.add-row button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.75);
+  white-space: nowrap;
 }
 
 .add-row input {
@@ -104,21 +114,25 @@ li {
   border: 1px solid rgba(0,0,0,0.2);
 }
 
-.add-row button {
-  border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.75);
-}
-
 .footer {
   margin-top: 14px;
   opacity: 0.75;
 }
 
+/* MOBILE IMPROVEMENTS */
 @media screen and (max-width: 600px) {
   .container {
     width: 95%;
     padding: 10px 8px 18px;
+  }
+
+  /* Allow add-row to wrap on small screens */
+  .add-row {
+    flex-wrap: wrap;
+  }
+
+  /* Make buttons stretch evenly on small screens */
+  .add-row button {
+    flex: 1;
   }
 }
